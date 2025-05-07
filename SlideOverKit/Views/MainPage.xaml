@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SlideOverKit.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:SlideOverKit.ViewModels"
+    x:DataType="vm:MainPageViewModel">
+
+    <StackLayout
+        Orientation="Vertical"
+        Spacing="10"
+        VerticalOptions="Center">
+        <Button Command="{Binding LaunchRightSideMasterDetailPageCommand}" Text="RightSideMasterDetail" />
+        <Button Command="{Binding LaunchSlideUpMenuPageCommand}" Text="SlideUpMenu" />
+        <Button Command="{Binding LaunchSlideDownMenuPageCommand}" Text="SlideDownMenu" />
+        <Button Command="{Binding LaunchQuickInnerMenuPageCommand}" Text="QuickInnerMenu" />
+        <Button Command="{Binding LaunchPopoversPageCommand}" Text="Popovers" />
+    </StackLayout>
+</ContentPage>

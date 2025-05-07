@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<t:SlideMenuView
+    x:Class="SlideOverKit.Views.RightSideMasterPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:t="clr-namespace:SlideOverKit">
+
+    <Grid
+        Padding="10,30,10,10"
+        ColumnDefinitions="*,*"
+        RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+        <Label
+            Grid.ColumnSpan="2"
+            FontSize="18"
+            HorizontalTextAlignment="Center"
+            Text="Right Side Menu"
+            TextColor="Black"
+            VerticalTextAlignment="Center" />
+        <Entry
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            HeightRequest="40"
+            Placeholder="Search..."
+            VerticalOptions="Center" />
+
+        <Grid
+            Grid.Row="2"
+            Grid.Column="0"
+            BackgroundColor="#E15771">
+            <Image
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Source="Home.png"
+                VerticalOptions="Center"
+                WidthRequest="50" />
+        </Grid>
+        <Grid
+            Grid.Row="2"
+            Grid.Column="1"
+            BackgroundColor="#348ECA">
+            <Image
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Source="Happy.png"
+                VerticalOptions="Center"
+                WidthRequest="50" />
+        </Grid>
+        <Grid
+            Grid.Row="3"
+            Grid.Column="0"
+            BackgroundColor="#348ECA">
+            <Image
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Source="Settings.png"
+                VerticalOptions="Center"
+                WidthRequest="50" />
+        </Grid>
+        <Grid
+            Grid.Row="3"
+            Grid.Column="1"
+            BackgroundColor="#348ECA">
+            <Image
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Source="VideoCall.png"
+                VerticalOptions="Center"
+                WidthRequest="50" />
+        </Grid>
+        <Grid
+            Grid.Row="4"
+            Grid.Column="0"
+            BackgroundColor="#348ECA">
+            <Image
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Source="Microphone.png"
+                VerticalOptions="Center"
+                WidthRequest="50" />
+        </Grid>
+        <Grid
+            Grid.Row="4"
+            Grid.Column="1"
+            BackgroundColor="#3AAA70">
+            <Image
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Source="Enter.png"
+                VerticalOptions="Center"
+                WidthRequest="50" />
+        </Grid>
+        <Grid
+            Grid.Row="5"
+            Grid.Column="0"
+            BackgroundColor="#348ECA">
+            <Image
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Source="Pencil.png"
+                VerticalOptions="Center"
+                WidthRequest="50" />
+        </Grid>
+        <Grid
+            Grid.Row="5"
+            Grid.Column="1"
+            BackgroundColor="#348ECA">
+            <Image
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Source="MessageFilled.png"
+                VerticalOptions="Center"
+                WidthRequest="50" />
+        </Grid>
+
+        <Image
+            Grid.Row="6"
+            Grid.ColumnSpan="2"
+            HeightRequest="10"
+            HorizontalOptions="Center"
+            Source="DoubleDown_Black.png"
+            VerticalOptions="Center"
+            WidthRequest="10" />
+    </Grid>
+</t:SlideMenuView>

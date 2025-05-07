@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<t:SlideMenuView
+    x:Class="SlideOverKit.Views.SlideDownMenuView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:t="clr-namespace:SlideOverKit">
+
+    <Grid
+        Padding="10,100,10,10"
+        ColumnDefinitions="*,*,*"
+        RowDefinitions="1*,1*,1*,0.6*">
+
+        <VerticalStackLayout Grid.Row="0" Grid.Column="0">
+            <Image
+                HeightRequest="50"
+                Source="Report_Blue.png"
+                WidthRequest="50" />
+            <Label
+                HeightRequest="50"
+                HorizontalTextAlignment="Center"
+                Text="Report"
+                TextColor="Black"
+                WidthRequest="100" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="0" Grid.Column="1">
+            <Image
+                HeightRequest="50"
+                Source="MoneyBag_Blue.png"
+                WidthRequest="50" />
+            <Label
+                HeightRequest="50"
+                HorizontalTextAlignment="Center"
+                Text="Money"
+                WidthRequest="100" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="0" Grid.Column="2">
+            <Image
+                HeightRequest="50"
+                Source="Timeline_Blue.png"
+                WidthRequest="50" />
+            <Label
+                HeightRequest="50"
+                HorizontalTextAlignment="Center"
+                Text="Time line"
+                WidthRequest="100" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="1" Grid.Column="0">
+            <Image
+                HeightRequest="50"
+                Source="Chat_Blue.png"
+                WidthRequest="50" />
+            <Label
+                HeightRequest="50"
+                HorizontalTextAlignment="Center"
+                Text="Comments"
+                WidthRequest="100" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="1" Grid.Column="1">
+            <Image
+                HeightRequest="50"
+                Source="USBConnected_Color.png"
+                WidthRequest="50" />
+            <Label
+                HeightRequest="50"
+                HorizontalTextAlignment="Center"
+                Text="Connected"
+                WidthRequest="100" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="1" Grid.Column="2">
+            <Image
+                HeightRequest="50"
+                Source="Save_Blue.png"
+                WidthRequest="50" />
+            <Label
+                HeightRequest="50"
+                HorizontalTextAlignment="Center"
+                Text="Save"
+                WidthRequest="100" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="2" Grid.Column="0">
+            <Image
+                HeightRequest="50"
+                Source="About_Blue.png"
+                WidthRequest="50" />
+            <Label
+                HeightRequest="50"
+                HorizontalTextAlignment="Center"
+                Text="About us"
+                WidthRequest="100" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="2" Grid.Column="1">
+            <Image
+                HeightRequest="50"
+                Source="CommandLine_Blue.png"
+                WidthRequest="50" />
+            <Label
+                HeightRequest="50"
+                HorizontalTextAlignment="Center"
+                Text="Command line"
+                WidthRequest="100" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="2" Grid.Column="2">
+            <Image
+                HeightRequest="50"
+                Source="Battery_Blue.png"
+                WidthRequest="50" />
+            <Label
+                HeightRequest="50"
+                HorizontalTextAlignment="Center"
+                Text="Battery"
+                WidthRequest="100" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="3" Grid.ColumnSpan="3">
+            <Slider
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                WidthRequest="200"
+                Value="0.5" />
+            <Image
+                HeightRequest="25"
+                HorizontalOptions="Center"
+                Source="DoubleDown_Blue.png"
+                WidthRequest="25" />
+        </VerticalStackLayout>
+
+    </Grid>
+</t:SlideMenuView>

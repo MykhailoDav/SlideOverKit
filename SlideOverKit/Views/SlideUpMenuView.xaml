@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<t:SlideMenuView
+    x:Class="SlideOverKit.Views.SlideUpMenuView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:t="clr-namespace:SlideOverKit">
+
+    <Grid
+        Padding="10,30,10,10"
+        ColumnDefinitions="1*,9*"
+        RowDefinitions="*,*,*,*,*">
+
+        <Label
+            Grid.ColumnSpan="2"
+            FontSize="24"
+            HorizontalTextAlignment="Center"
+            Text="Slide Up Menu"
+            TextColor="White"
+            VerticalTextAlignment="Center" />
+
+        <Image
+            Grid.Row="1"
+            Grid.Column="0"
+            HeightRequest="25"
+            HorizontalOptions="End"
+            Source="Home.png"
+            VerticalOptions="Center"
+            WidthRequest="25" />
+        <Label
+            Grid.Row="1"
+            Grid.Column="1"
+            HorizontalTextAlignment="Start"
+            Text="Go home now?"
+            TextColor="White"
+            VerticalTextAlignment="Center" />
+
+        <Image
+            Grid.Row="2"
+            Grid.Column="0"
+            HeightRequest="25"
+            HorizontalOptions="End"
+            Source="Pencil.png"
+            VerticalOptions="Center"
+            WidthRequest="25" />
+        <Label
+            Grid.Row="2"
+            Grid.Column="1"
+            HorizontalTextAlignment="Start"
+            Text="Set destination"
+            TextColor="White"
+            VerticalTextAlignment="Center" />
+
+        <Image
+            Grid.Row="3"
+            Grid.Column="0"
+            HeightRequest="25"
+            HorizontalOptions="End"
+            Source="Settings.png"
+            VerticalOptions="Center"
+            WidthRequest="25" />
+        <Label
+            Grid.Row="3"
+            Grid.Column="1"
+            HorizontalTextAlignment="Start"
+            Text="Navigation settings"
+            TextColor="White"
+            VerticalTextAlignment="Center" />
+
+        <Button
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            BackgroundColor="#2E3332"
+            BorderWidth="1"
+            CornerRadius="5"
+            FontSize="24"
+            Text="Start"
+            TextColor="White" />
+
+    </Grid>
+</t:SlideMenuView>

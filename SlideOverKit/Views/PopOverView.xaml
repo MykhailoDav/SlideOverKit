@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<t:SlidePopupView
+    x:Class="SlideOverKit.Views.PopOverView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:t="clr-namespace:SlideOverKit">
+    <VerticalStackLayout
+        Padding="15,10,15,30"
+        BackgroundColor="White"
+        HeightRequest="300"
+        HorizontalOptions="Fill"
+        Spacing="20"
+        VerticalOptions="Fill"
+        WidthRequest="200">
+
+        <Label
+            FontSize="24"
+            HeightRequest="30"
+            HorizontalTextAlignment="Center"
+            Text="Build some Awesome SlideOver's" />
+
+        <Entry HeightRequest="40" Placeholder="Testing..." />
+
+        <Image HeightRequest="40" Source="xamconsulting.png" />
+
+        <Button
+            x:Name="DoneButton"
+            Clicked="DoneButton_Clicked"
+            Text="Close" />
+
+    </VerticalStackLayout>
+</t:SlidePopupView>
