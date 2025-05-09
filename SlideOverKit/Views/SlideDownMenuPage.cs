@@ -44,10 +44,13 @@ public class SlideDownMenuPage : ContentPage, IMenuContainerPage
                 if (this.SlideMenu.IsShown)
                 {
                     HideMenuAction?.Invoke();
+                    this.SlideMenu.IsVisible = false;
+
                 }
                 else
                 {
                     ShowMenuAction?.Invoke();
+                    this.SlideMenu.IsVisible = true;
                 }
             }),
             IconImageSource = "Settings.png",

@@ -28,11 +28,11 @@ public class MenuContainerPageDroidRenderer  : PageRenderer, ISlideOverKitPageRe
         OnElementChangedEvent?.Invoke(e);
     }
 
-    protected override void OnLayout (bool changed, int l, int t, int r, int b)
-    {
-        base.OnLayout (changed, l, t, r, b);
-        OnLayoutEvent?.Invoke(changed, l, t, r, b);
-    }
+    //protected override void OnLayout (bool changed, int l, int t, int r, int b)
+    //{
+    //    base.OnLayout (changed, l, t, r, b);
+    //    OnLayoutEvent?.Invoke(changed, l, t, r, b);
+    //}
 
     protected override void OnSizeChanged (int w, int h, int oldw, int oldh)
     {

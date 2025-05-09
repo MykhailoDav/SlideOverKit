@@ -37,7 +37,7 @@ public class SlideOverKitDroidHandler
         _pageRenderer = menuKit as PageRenderer;
 
         _menuKit.OnElementChangedEvent = OnElementChanged;
-        _menuKit.OnLayoutEvent = OnLayout;
+        //_menuKit.OnLayoutEvent = OnLayout;
         _menuKit.OnSizeChangedEvent = OnSizeChanged;
 
         _context = context;

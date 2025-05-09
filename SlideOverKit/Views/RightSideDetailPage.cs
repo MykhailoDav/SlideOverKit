@@ -7,6 +7,7 @@ public class RightSideDetailPage : MenuContainerPage
 {
     public RightSideDetailPage()
     {
+        BindingContext = this;
         Content = new StackLayout
         {
             VerticalOptions = LayoutOptions.Center,

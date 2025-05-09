@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlideOverKit", "SlideOverKit.csproj", "{AC1780CF-AEC7-184A-971C-8E8F8FB815B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controls", "Controls", "{81BD1701-201A-4D58-4574-B4D5A98CD4D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlideOverKit.Droid", "Controls\SlideOverKit.Droid\SlideOverKit.Droid.csproj", "{3281AAF2-C24C-6B23-0D0D-1C7725BACFB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC1780CF-AEC7-184A-971C-8E8F8FB815B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC1780CF-AEC7-184A-971C-8E8F8FB815B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC1780CF-AEC7-184A-971C-8E8F8FB815B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC1780CF-AEC7-184A-971C-8E8F8FB815B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3281AAF2-C24C-6B23-0D0D-1C7725BACFB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3281AAF2-C24C-6B23-0D0D-1C7725BACFB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3281AAF2-C24C-6B23-0D0D-1C7725BACFB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3281AAF2-C24C-6B23-0D0D-1C7725BACFB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3281AAF2-C24C-6B23-0D0D-1C7725BACFB9} = {81BD1701-201A-4D58-4574-B4D5A98CD4D2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E1B805D-E24F-4302-8A71-B07E3157E85C}
+	EndGlobalSection
+EndGlobal

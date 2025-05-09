@@ -27,7 +27,6 @@ public static class MauiProgram
              handlers.AddCompatibilityRenderer<MenuContainerPage, MenuContainerPageDroidRenderer>();
              handlers.AddHandler<SlideMenuView, SlideMenuDroidRenderer>();
              handlers.AddHandler<SlidePopupView, SlidePopupViewRendererDroid>();
-
 #endif
          });
 
