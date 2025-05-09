@@ -7,9 +7,11 @@ public class RightSideDetailPage : MenuContainerPage
 {
     public RightSideDetailPage()
     {
+        BackgroundColor = Colors.Wheat;
         BindingContext = this;
-        Content = new StackLayout
+        Content = new VerticalStackLayout
         {
+            BackgroundColor = Colors.Red,
             VerticalOptions = LayoutOptions.Center,
             Spacing = 10,
             Children = {
@@ -28,6 +30,6 @@ public class RightSideDetailPage : MenuContainerPage
             }
         };
 
-        this.SlideMenu = new SlideOverKit.Views.RightSideMasterPage();
+        this.SlideMenu = new RightSideMasterPage();
     }
 }

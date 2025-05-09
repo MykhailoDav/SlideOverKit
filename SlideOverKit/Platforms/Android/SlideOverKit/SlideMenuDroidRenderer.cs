@@ -39,6 +39,7 @@ public class SlideMenuDroidRenderer : ViewRenderer<SlideMenuView, global::Androi
 
         if (ScreenSizeHelper.ScreenHeight == 0 && ScreenSizeHelper.ScreenWidth == 0)
         {
+            Console.WriteLine("ScreenSizeHelper is not initialized. Initializing now.");
             ScreenSizeHelper.ScreenWidth = Resources.DisplayMetrics.WidthPixels / Resources.DisplayMetrics.Density;
             ScreenSizeHelper.ScreenHeight = Resources.DisplayMetrics.HeightPixels / Resources.DisplayMetrics.Density;
         }
