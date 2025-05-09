@@ -14,7 +14,7 @@ public static class MauiProgram
         builder
             .UseMauiApp<App>()
 #if ANDROID
-            .UseMauiCompatibility()
+            .UseMauiCompatibility()            
 #endif
             .ConfigureFonts(fonts =>
             {
