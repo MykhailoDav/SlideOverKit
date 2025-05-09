@@ -13,7 +13,9 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
+#if ANDROID
             .UseMauiCompatibility()
+#endif
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -22,9 +24,10 @@ public static class MauiProgram
         .ConfigureMauiHandlers((handlers) =>
          {
 #if ANDROID
-             handlers.AddCompatibilityRenderer(typeof(SlideMenuView), typeof(SlideMenuDroidRenderer));
-             handlers.AddCompatibilityRenderer(typeof(SlidePopupView), typeof(SlidePopupViewRendererDroid));
-             handlers.AddCompatibilityRenderer(typeof(MenuContainerPage), typeof(MenuContainerPageDroidRenderer));
+             handlers.AddCompatibilityRenderer<MenuContainerPage, MenuContainerPageDroidRenderer>();
+             handlers.AddHandler<SlideMenuView, SlideMenuDroidRenderer>();
+             handlers.AddHandler<SlidePopupView, SlidePopupViewRendererDroid>();
+
 #endif
          });
 
@@ -39,9 +42,6 @@ public static class MauiProgram
         builder.Services.AddTransient<PopOverWithTriangleView>();
         builder.Services.AddTransient<QuickInnerMenuPage>();
         builder.Services.AddTransient<QuickInnerMenuView>();
-
-
-
 
 
         return builder.Build();
