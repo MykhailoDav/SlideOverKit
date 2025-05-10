@@ -1,15 +1,11 @@
-﻿using System;
-using SlideOverKit;
-using Android.Views;
-using Android.Content;
+﻿using Android.Content;
 using Microsoft.Maui.Controls.Platform;
-using SlideOverKit.Platforms.Android.SlideOverKit;
-using Microsoft.Maui.Controls.Handlers.Compatibility;
-using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+using Microsoft.Maui.Handlers;
+using Microsoft.Maui.Platform;
 
 namespace SlideOverKit.Platforms.Android.SlideOverKit;
 
-public class MenuContainerPageDroidRenderer : PageRenderer, ISlideOverKitPageRendererDroid
+public class MenuContainerPageDroidRenderer : PageHandler, ISlideOverKitPageRendererDroid
 {
     public Action<ElementChangedEventArgs<Page>> OnElementChangedEvent { get; set; }
 
@@ -17,27 +13,28 @@ public class MenuContainerPageDroidRenderer : PageRenderer, ISlideOverKitPageRen
 
     public Action<int, int, int, int> OnSizeChangedEvent { get; set; }
 
-    public MenuContainerPageDroidRenderer(Context context) : base(context)
+    protected override ContentViewGroup CreatePlatformView()
     {
-        new SlideOverKitDroidHandler().Init(this, context);
+        new SlideOverKitDroidHandler().Init(this, MauiContext.Context!);
+        return base.CreatePlatformView();
     }
+    /* 
+        protected override void OnElementChanged(ElementChangedEventArgs<Page> e)
+        {
+            base.OnElementChanged(e);
+            OnElementChangedEvent?.Invoke(e);
+        }
 
-    protected override void OnElementChanged(ElementChangedEventArgs<Page> e)
-    {
-        base.OnElementChanged(e);
-        OnElementChangedEvent?.Invoke(e);
-    }
+        protected override void OnLayout(bool changed, int l, int t, int r, int b)
+        {
+            base.OnLayout(changed, l, t, r, b);
+            OnLayoutEvent?.Invoke(changed, l, t, r, b);
+        }
 
-    protected override void OnLayout(bool changed, int l, int t, int r, int b)
-    {
-        base.OnLayout(changed, l, t, r, b);
-        OnLayoutEvent?.Invoke(changed, l, t, r, b);
-    }
-
-    protected override void OnSizeChanged(int w, int h, int oldw, int oldh)
-    {
-        base.OnSizeChanged(w, h, oldw, oldh);
-        OnSizeChangedEvent?.Invoke(w, h, oldw, oldh);
-    }
+        protected override void OnArranged(int w, int h, int oldw, int oldh)
+        {
+            base.OnSizeChanged(w, h, oldw, oldh);
+            OnSizeChangedEvent?.Invoke(w, h, oldw, oldh);
+        } */
 }
 

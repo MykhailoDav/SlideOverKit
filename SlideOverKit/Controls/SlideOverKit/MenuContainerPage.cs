@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SlideOverKit;
+﻿namespace SlideOverKit;
 
 public class MenuContainerPage : ContentPage, IMenuContainerPage, IPopupContainerPage
 {

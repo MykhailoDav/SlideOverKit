@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Logging;
-using Microsoft.Maui.Controls.Compatibility.Hosting;
 using SlideOverKit.Platforms.Android.SlideOverKit;
 using SlideOverKit.ViewModels;
 using SlideOverKit.Views;
@@ -13,9 +12,7 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
-#if ANDROID
-            .UseMauiCompatibility()            
-#endif
+
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -24,7 +21,7 @@ public static class MauiProgram
         .ConfigureMauiHandlers((handlers) =>
          {
 #if ANDROID
-             handlers.AddCompatibilityRenderer<MenuContainerPage, MenuContainerPageDroidRenderer>();
+             handlers.AddHandler<MenuContainerPage, MenuContainerPageDroidRenderer>();
              handlers.AddHandler<SlideMenuView, SlideMenuDroidRenderer>();
              handlers.AddHandler<SlidePopupView, SlidePopupViewRendererDroid>();
 #endif
