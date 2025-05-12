@@ -19,7 +19,7 @@ public class MenuContainerPageDroidRenderer : PageHandler, ISlideOverKitPageRend
     {
         var viewGroup = base.CreatePlatformView();
 
-        new SlideOverKitDroidHandler().Init(this, MauiContext.Context!);
+        new SlideOverKitDroidHandler().Init(this, MauiContext);
 
         viewGroup.ViewTreeObserver.GlobalLayout += (sender, args) =>
         {
