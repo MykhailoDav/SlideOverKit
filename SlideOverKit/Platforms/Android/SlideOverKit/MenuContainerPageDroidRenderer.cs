@@ -1,4 +1,6 @@
-﻿using Android.Content;
+using Android.Content;
+using Android.Views;
+using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Platform;
 using Microsoft.Maui.Handlers;
 using Microsoft.Maui.Platform;
@@ -15,26 +17,33 @@ public class MenuContainerPageDroidRenderer : PageHandler, ISlideOverKitPageRend
 
     protected override ContentViewGroup CreatePlatformView()
     {
-        new SlideOverKitDroidHandler().Init(this, MauiContext.Context!);
-        return base.CreatePlatformView();
+        var viewGroup = base.CreatePlatformView();
+
+        new SlideOverKitDroidHandler().Init(this, MauiContext);
+
+        viewGroup.ViewTreeObserver.GlobalLayout += (sender, args) =>
+        {
+            var width = viewGroup.Width;
+            var height = viewGroup.Height;
+
+            OnLayoutEvent?.Invoke(true, 0, 0, width, height);
+        };
+
+        viewGroup.LayoutChange += (sender, e) =>
+        {
+            OnSizeChangedEvent?.Invoke(e.Right - e.Left, e.Bottom - e.Top, e.OldRight - e.OldLeft, e.OldBottom - e.OldTop);
+        };
+
+        return viewGroup;
     }
-    /* 
-        protected override void OnElementChanged(ElementChangedEventArgs<Page> e)
-        {
-            base.OnElementChanged(e);
-            OnElementChangedEvent?.Invoke(e);
-        }
 
-        protected override void OnLayout(bool changed, int l, int t, int r, int b)
-        {
-            base.OnLayout(changed, l, t, r, b);
-            OnLayoutEvent?.Invoke(changed, l, t, r, b);
-        }
+    public override void SetVirtualView(IView view)
+    {
+        base.SetVirtualView(view);
 
-        protected override void OnArranged(int w, int h, int oldw, int oldh)
+        if (view is Page page)
         {
-            base.OnSizeChanged(w, h, oldw, oldh);
-            OnSizeChangedEvent?.Invoke(w, h, oldw, oldh);
-        } */
+            OnElementChangedEvent?.Invoke(new ElementChangedEventArgs<Page>(null, page));
+        }
+    }
 }
-

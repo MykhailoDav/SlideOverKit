@@ -3,9 +3,12 @@ using Android.Content;
 using Android.Util;
 using Android.Views;
 using Android.Views.InputMethods;
+using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 using Microsoft.Maui.Controls.Platform;
 using Microsoft.Maui.Controls.Shapes;
+using Microsoft.Maui.Handlers;
+using Microsoft.Maui.Platform;
 using System;
 using System.Linq;
 using Platform = Microsoft.Maui.Controls.Compatibility.Platform.Android.Platform;
@@ -14,7 +17,7 @@ namespace SlideOverKit.Platforms.Android.SlideOverKit;
 
 public class SlideOverKitDroidHandler
 {
-    PageRenderer _pageRenderer;
+    PageHandler _pageRenderer;
     ISlideOverKitPageRendererDroid _menuKit;
     IMenuContainerPage _basePage;
     IDragGesture _dragGesture;
@@ -31,7 +34,7 @@ public class SlideOverKitDroidHandler
     }
 
 
-    public void Init(ISlideOverKitPageRendererDroid menuKit, Context context)
+    public void Init(ISlideOverKitPageRendererDroid menuKit, IMauiContext mauiContext)
     {
         _menuKit = menuKit;
         _pageRenderer = menuKit as PageRenderer;
@@ -40,7 +43,9 @@ public class SlideOverKitDroidHandler
         _menuKit.OnLayoutEvent = OnLayout;
         _menuKit.OnSizeChangedEvent = OnSizeChanged;
 
-        _context = context;
+        _context = mauiContext.Context;
+
+        Forms.Init(mauiContext);
     }
 
     void OnElementChanged(ElementChangedEventArgs<Page> e)
@@ -108,6 +113,7 @@ public class SlideOverKitDroidHandler
         if (_popMenuOverlayRenderer == null)
         {
             menu.Parent = (Page)_basePage;
+      
             _popMenuOverlayRenderer = Platform.CreateRendererWithContext(menu, _context);
             Platform.SetRenderer(menu, _popupRenderer);
 
